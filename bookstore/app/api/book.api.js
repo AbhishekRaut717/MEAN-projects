@@ -64,7 +64,7 @@ exports.delete = function(req, res)
 
 exports.update = function(req, res)
 {
-	Book.find({"title" : req.params.author}, function(err, data){
+	Book.find({"title" : req.params.book}, function(err, data){
 
 		if(err)
 		{
