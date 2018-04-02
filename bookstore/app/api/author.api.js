@@ -26,7 +26,7 @@ exports.findOne = function(req, res)
 
 		if(err)
 		{
-			if(err.kind === "title")
+			if(err.kind === "author")
 			{
 				res.json({"mesage" : `No booksby ${req.params.author} found`});
 
@@ -50,7 +50,7 @@ exports.delete = function(req, res)
 
 		if(err)
 		{
-			if(err.kind === "title")
+			if(err.kind === "author")
 			{
 				res.json({"message" : "no author found"});
 			}
