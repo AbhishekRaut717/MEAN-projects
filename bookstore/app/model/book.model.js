@@ -7,7 +7,7 @@ BookSchema = mongoose.Schema({
 	"price" : Number,
 	"detail" : String
 },{
-	timestamp : true
+	"timestamp" : true
 });
 
 module.exports = mongoose.model('Book', BookSchema);

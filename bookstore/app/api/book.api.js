@@ -14,14 +14,9 @@ exports.findAll = function(req, res)
 	});
 }
 
-// exports.create = function(req, res)
-// {
-// 	if(!req.body.title || !req.body.author)
-// }
-
 exports.findOne = function(req, res)
 {
-	Book.findOne({"title" : req.params.title}, function(err, data){
+	Book.find({"title" : req.params.title}, function(err, data){
 		if(err)
 		{
 			if(err.kind === "title")
@@ -39,4 +34,71 @@ exports.findOne = function(req, res)
 		res.json(data);
 	});
 	
+}
+
+exports.delete = function(req, res)
+{
+	Book.remove({"title" : req.params.title}, function(err, data)
+	{
+		if(err)
+		{
+			if(err.kind === "title")
+			{
+				res.json({"message" : `No Book with this title : ${req.params.title}`});
+			}
+
+			res.json({"message" : `error ${err} occured`});
+		}
+
+		if(!data)
+		{
+			res.json({"message" : "This title doesn't exist"});
+
+		}
+
+		res.json({"message" : `${req.params.title} deleted sucessfuly`});
+	});
+
+
+}
+
+exports.update = function(req, res)
+{
+	Book.find({"title" : req.params.author}, function(err, data){
+
+		if(err)
+		{
+			if(err.kind === "title")
+			{
+				res.json({"message" : "No books by this title found"});
+
+			}
+
+			res.json({"message" : "some error occured"});
+		}
+
+		if(!data)
+		{
+			res.json({"message" : "No book by this title"});
+
+		}
+
+		var book = new Book();
+
+		book.title = req.body.title;
+		book.author = req.body.author;
+		book.price = req.body.price;
+		book.detail = req.body.detail;
+
+		book.save(function(err, data){
+			if(err)
+			{
+				res.json({"message" : "could not update"})
+			}
+			else
+				{
+					res.json({"message" : "data updated successflly"});
+				}
+			});
+	});
 }

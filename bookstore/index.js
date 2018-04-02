@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 });
 
 require('./app/routes/book.routes.js')(app);
-//require('./app/routes/author.routes.js')(app);
+require('./app/routes/author.routes.js')(app);
 
 app.listen(port, () => {
 	console.log(`We are live on ${port}`);

@@ -6,7 +6,8 @@ module.exports = function(app)
 
 	app.get("/api/books/:title", books.findOne);
 
-	// app.delete('/api/books/:title', books.delete);
+	app.delete('/api/books/:title', books.delete);
 
+	app.put('/api/books/:title', books.update);
 
 }
