@@ -1,0 +1,27 @@
+{
+  "name": "bankaccount",
+  "version": "1.0.0",
+  "description": "A simple API for creating user's bank account and checking balance and other updates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NodeJs",
+    "ExpressJS",
+    "Mongoose",
+    "REST",
+    "API",
+    "Swagger"
+  ],
+  "author": "Abhishek Raut",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mongodb": "^3.0.5",
+    "mongoose": "^5.0.12",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.3"
+  }
+}
