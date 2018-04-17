@@ -1,2 +1,3 @@
 # nodejs-projects
-Sample Nodejs Products
+Sample Nodejs Projects 
+Projects include us of ExpressJS, JSON, AJAX, MongoDB, Mongoose, REST API
