@@ -1,6 +1,6 @@
 var Account = require("../model/model.js");
 var bodyParser = require("body-parser");
-
+var passport = require('passport');
 
 
 exports.create = (req, res) => 
@@ -161,4 +161,3 @@ exports.sendMoney = function(req, res)
 		}
 	});
 }
-

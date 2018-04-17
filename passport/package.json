@@ -1,0 +1,24 @@
+{
+  "name": "login-signup-auth",
+  "version": "1.0.0",
+  "description": "A login and signup by using googel-auth2.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "keywords": [
+    "PassportJS",
+    "Nodejs",
+    "ExpressJS",
+    "Google-Auth2.0"
+  ],
+  "author": "Abhishek Raut",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.3",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0"
+  }
+}

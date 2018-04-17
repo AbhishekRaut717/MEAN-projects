@@ -4,7 +4,9 @@ module.exports = (app) =>
 
 	app.post('/user', users.create);
 
-	app.post('/user/login', users.login);
+	app.post('/user/login', passport.authenticate('local'), function(req, res){
+		res.redirect('/user/info/'+ req.body.user_id);
+	});
 
 	app.get('/user/info/:user_id', users.info);
 
